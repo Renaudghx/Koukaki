@@ -1,12 +1,12 @@
 section {
-  animation: section-fade-in 1s 0ms ease-in-out both;
+  animation: section-fade-in 1.5s 0ms ease-in-out both;
 }
 
 .banner {
-  animation: section-fade-in-movie 1s 0ms ease-in-out both;
+  animation: section-fade-in-movie 1.5s 0ms ease-in-out both;
 }
-.banner img {
-  animation: section-fade-in 1s 0ms ease-in-out both;
+.banner > img {
+  animation: section-fade-in 1.5s 0ms ease-in-out both;
 }
 
 @keyframes section-fade-in {
@@ -28,6 +28,37 @@ section {
     transform: translateY(0);
     opacity: 1;
   }
+}
+* ::after, #studio h2::before, .site-footer::before {
+  animation: spin 19s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.title-story, .title-studio {
+  animation: scroll-title 500ms ease-in-out both;
+  display: inline-block;
+}
+
+@keyframes scroll-title {
+  0% {
+    transform: rotateX(100deg);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+  }
+}
+.observe-story {
+  top: -100px;
+  position: relative;
 }
 
 /*# sourceMappingURL=theme.css.map */
