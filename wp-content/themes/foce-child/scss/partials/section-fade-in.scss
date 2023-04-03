@@ -4,6 +4,7 @@ section {
   
   .banner {
     animation: section-fade-in-movie 1.5s 0ms ease-in-out both;
+    background-image: none;
   
     & > img {
       animation: section-fade-in 1.5s 0ms ease-in-out both;
@@ -33,3 +34,7 @@ section {
         opacity: 1;
     }
   }  
+  
+.background-video {
+  position: absolute;
+}

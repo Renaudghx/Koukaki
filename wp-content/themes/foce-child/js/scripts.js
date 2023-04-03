@@ -1,3 +1,5 @@
+// ---------- Title Scroll ----------
+
 // Remove the transition class
 const titleStory = document.querySelector('.title-story');
 titleStory.classList.remove('title-story');
@@ -26,3 +28,6 @@ function titleObserver(classAnim, classObserve, nameConst){
 
 titleObserver('title-story','.observe-story', titleStory);
 titleObserver('title-studio','.observe-studio', titleStudio);
+
+
+// ----------  ----------
