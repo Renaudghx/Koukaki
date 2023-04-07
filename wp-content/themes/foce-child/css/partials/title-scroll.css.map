@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/partials/title-scroll.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;;AAGJ;EACC;IACO;IACN;;EAGD;IACC;IACA;;;AAIF;EACI;EACA;EACH","file":"title-scroll.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/partials/title-scroll.scss"],"names":[],"mappings":"AAAA;EACI;EACH;EACA;EACA;EACA;;;AAED;EACC;;;AAED;EACI;;;AAGJ;EACC;IACO;IACN;;EAGD;IACC;IACA;;;AAIF;EACI;EACA;EACH;;;AAGD;EACC;EACA;EACA;EACA","file":"title-scroll.css"}

@@ -1,15 +1,26 @@
 .title-story, .title-studio {
-  animation: scroll-title 500ms ease-in-out both;
   display: inline-block;
+  overflow: hidden;
+  height: 60px;
+  text-align: center;
+  line-height: 100%;
+}
+
+.title-story, .studio1 {
+  animation: scroll-title 500ms ease-in-out both;
+}
+
+.studio2 {
+  animation: scroll-title 250ms 250ms ease-in-out both;
 }
 
 @keyframes scroll-title {
   0% {
-    transform: rotateX(100deg);
+    transform: translateY(80px);
     transform-origin: bottom;
   }
   100% {
-    transform: rotateX(0);
+    transform: translateY(0px);
     transform-origin: bottom;
   }
 }
@@ -17,6 +28,13 @@
   top: -100px;
   position: relative;
   display: block;
+}
+
+.h2Contain {
+  overflow: hidden;
+  display: inline-block;
+  height: 70px;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=title-scroll.css.map */

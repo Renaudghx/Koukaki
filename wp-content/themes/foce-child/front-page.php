@@ -5,15 +5,22 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-        <video class="background-video" autoplay loop muted>
+        <video class="background-video" autoplay loop muted poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
             <source src="http://localhost/P9/koukaki/wp-content/themes/foce-child/assets/video/Studio_Koukaki-vidéo_header_sans_son_.mp4" type="video/mp4">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>" title="Banner du site Koukaki">
         </video>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-            
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"
+        data-anchor-target=".banner" 
+        data-bottom-top="" 
+        data-top-top=""
+        >
+        
         </section>
         <section id="#story" class="story">
-            <h2><span class="title-story">L'histoire</span></h2>
+            <h2>
+                <span class="h2Contain">
+                    <span class="title-story">L'histoire</span>
+                </span>
+            </h2>
             <span class="observe-story"></span>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
@@ -31,27 +38,21 @@ get_header();
             <article id="characters">
                 <div class="main-character">
                     <h3>Les personnages</h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
-                    echo '<figure>';
-                    echo get_the_post_thumbnail( $main_character->ID, 'full' );
-                    echo '<figcaption>'. $main_character->post_title . '</figcaption>';
-                    echo '</figure>';
-                    $characters_query->next_post();
-                    ?>
                 </div>
-                <div class="other-characters">
-                    <?php
-                    while ( $characters_query->have_posts() ) {
-                        $characters_query->the_post();
-                        echo '<figure>';
-                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                        echo '<figcaption>';
-                        the_title();
-                        echo'</figcaption>';
-                        echo '</figure>';
-                    }
-                    ?>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <?php
+                        while ( $characters_query->have_posts() ) {
+                            $characters_query->the_post();
+                            echo '<figure class="swiper-slide">';
+                            echo get_the_post_thumbnail( get_the_ID(), 'full' );
+                            echo '<figcaption>';
+                            the_title();
+                            echo'</figcaption>';
+                            echo '</figure>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </article>
             <article id="place">
@@ -65,7 +66,11 @@ get_header();
 
 
         <section id="studio">
-            <h2><span class="title-studio">Studio Koukaki</span></h2>
+            <h2>
+                <span class="h2Contain">
+                    <span class="title-studio studio1">Studio</span> <span class="title-studio studio2">Koukaki</span>
+                </span>
+            </h2>
             <span class="observe-studio"></span>
             <div>
                 <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
@@ -73,6 +78,9 @@ get_header();
             </div>
             </section>
             <?php get_template_part( 'section-oscars/section-festival' ); ?>
+            <script src="http://d3a1v57rabk2hm.cloudfront.net/maxjacobson/bold_mobile-copy-8/js/skrollr.min.js"></script>
+            <script src="//d3a1v57rabk2hm.cloudfront.net/maxjacobson/bold_mobile-copy-8/js/skrollr.js"></script>
+            <script type="module" src="./node_modules/swiper/swiper-bundle.js"></script>
     </main><!-- #main -->
 
 <?php

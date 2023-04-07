@@ -3,8 +3,10 @@
 // Remove the transition class
 const titleStory = document.querySelector('.title-story');
 titleStory.classList.remove('title-story');
-const titleStudio = document.querySelector('.title-studio');
-titleStudio.classList.remove('title-studio');
+const titleStudio1 = document.querySelector('.studio1');
+titleStudio1.classList.remove('.studio1');
+const titleStudio2 = document.querySelector('.studio2');
+titleStudio2.classList.remove('.studio2');
 
 function titleObserver(classAnim, classObserve, nameConst){
 
@@ -27,7 +29,21 @@ function titleObserver(classAnim, classObserve, nameConst){
 }
 
 titleObserver('title-story','.observe-story', titleStory);
-titleObserver('title-studio','.observe-studio', titleStudio);
+titleObserver('studio1','.observe-studio', titleStudio1);
+titleObserver('studio2','.observe-studio', titleStudio2);
 
+// ---------- Skrollr ----------
 
-// ----------  ----------
+var s = skrollr.init();
+
+// Init de skrollr uniquement sur desktop
+if (window.matchMedia("(min-width: 1025px)").matches) {
+     skrollr.init({
+         forceHeight: false,
+         edgeStrategy: "set",
+         easing:{
+             WTF:Math.random,
+            inverted: (e) => 1-e
+         }
+     });
+}
