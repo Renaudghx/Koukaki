@@ -6,7 +6,7 @@ section {
   animation: section-fade-in-movie 1.5s 0ms ease-in-out both;
   background-image: none;
 }
-.banner > img {
+.banner > .imgLogo {
   animation: section-fade-in 1.5s 0ms ease-in-out both;
 }
 

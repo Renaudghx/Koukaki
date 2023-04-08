@@ -1,7 +1,7 @@
 // ---------- Swiper.js ----------
 
 // core version:
-import Swiper from "swiper";
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
 // import Swiper styles :
 import '../../../../node_modules/swiper/swiper-bundle.css';
 

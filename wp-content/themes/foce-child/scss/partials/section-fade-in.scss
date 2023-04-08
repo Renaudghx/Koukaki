@@ -1,12 +1,12 @@
 section {
     animation: section-fade-in 1.5s 0ms ease-in-out both;
   }
-  
+
   .banner {
     animation: section-fade-in-movie 1.5s 0ms ease-in-out both;
     background-image: none;
   
-    & > img {
+    & > .imgLogo {
       animation: section-fade-in 1.5s 0ms ease-in-out both;
     }
   }

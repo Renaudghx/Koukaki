@@ -1,3 +1,29 @@
+// ---------- Section Fade in - Logo ----------
+const logoImg = document.querySelector('.imgLogo');
+setTimeout(function() {
+  logoImg.classList.remove('imgLogo');
+}, (1500));
+
+
+// ---------- Spin Flower ----------
+const flower = document.querySelector('.title-story');
+
+let lastKnownScrollPosition = 0;
+let ticking = false;
+
+document.addEventListener("scroll", (event) => {
+  lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      flower.classList.add('spinFaster');;
+      ticking = false;
+    });
+    ticking = true;
+    flower.classList.remove('spinFaster');
+  }
+});
+
 // ---------- Title Scroll ----------
 
 // Remove the transition class
@@ -31,6 +57,7 @@ function titleObserver(classAnim, classObserve, nameConst){
 titleObserver('title-story','.observe-story', titleStory);
 titleObserver('studio1','.observe-studio', titleStudio1);
 titleObserver('studio2','.observe-studio', titleStudio2);
+
 
 // ---------- Skrollr ----------
 

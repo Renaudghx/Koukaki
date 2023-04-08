@@ -5,15 +5,14 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-        <video class="background-video" autoplay loop muted poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
+        <video class="background-video" autoplay loop muted 
+        poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
             <source src="http://localhost/P9/koukaki/wp-content/themes/foce-child/assets/video/Studio_Koukaki-vidéo_header_sans_son_.mp4" type="video/mp4">
         </video>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"
-        data-anchor-target=".banner" 
-        data-bottom-top="" 
-        data-top-top=""
+        <img class="imgLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"
+        data-bottom="transform: translateY(45px);" 
+        data-top-bottom="transform: translateY(-200px);"
         >
-        
         </section>
         <section id="#story" class="story">
             <h2>

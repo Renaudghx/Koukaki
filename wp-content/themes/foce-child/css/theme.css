@@ -6,7 +6,7 @@ section {
   animation: section-fade-in-movie 1.5s 0ms ease-in-out both;
   background-image: none;
 }
-.banner > img {
+.banner > .imgLogo {
   animation: section-fade-in 1.5s 0ms ease-in-out both;
 }
 
@@ -115,15 +115,13 @@ section {
 
 .background-video {
   position: absolute;
-  overflow-x: hidden;
 }
 
 .banner {
   position: relative;
-  overflow-x: hidden;
 }
 .banner img {
-  animation: section-fade-in 1.5s 0ms ease-in-out both, logo-move 20s 1.5s linear both infinite;
+  animation: logo-move 20s 0s linear both infinite;
   position: fixed;
   display: block;
 }
