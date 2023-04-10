@@ -115,6 +115,8 @@ section {
 
 .background-video {
   position: absolute;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .banner {
@@ -124,6 +126,11 @@ section {
   animation: logo-move 20s 0s linear both infinite;
   position: fixed;
   display: block;
+}
+
+.story__article {
+  margin-bottom: 2em;
+  padding-bottom: 0px;
 }
 
 @keyframes logo-move {
@@ -199,16 +206,31 @@ section {
 }
 .story #characters {
   flex-direction: column;
+  margin-right: 0;
 }
 
-.swiper {
-  width: 100vw;
-  height: 442px;
+.swiper-container {
+  width: 1440px;
+  height: 440px;
 }
 
-.main-character {
-  justify-content: flex-start;
-  padding-left: 175px;
+.swiper-slide figure {
+  margin: 0;
+}
+.swiper-slide img {
+  height: none;
+  max-width: none;
+}
+
+.main-character h3 {
+  background-position: left;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.story #characters div {
+  flex: none;
+  flex-shrink: 0;
 }
 
 /*# sourceMappingURL=theme.css.map */

@@ -1,6 +1,8 @@
 // CSS Video Hero
 .background-video {
     position: absolute;
+    width: 100%;
+    max-width: 1440px;
   }
 
 .banner {
@@ -11,6 +13,10 @@
         position: fixed;
         display: block;
     }
+}
+.story__article {
+    margin-bottom: 2em;
+    padding-bottom: 0px;
 }
 
 @keyframes logo-move {

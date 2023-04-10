@@ -1,19 +1,24 @@
-// ---------- Swiper.js ----------
+// ---------- Swiper ----------
 
 // core version:
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
+import Swiper from '../../../../node_modules/swiper/swiper-bundle.esm.browser.min.js';
 // import Swiper styles :
-import '../../../../node_modules/swiper/swiper-bundle.css';
+import sheet from '../../../../node_modules/swiper/swiper.min.css' assert { type: 'css' };
+document.adoptedStyleSheets = [sheet];
 
 // init Swiper:
 
 const swiper = new Swiper(".swiper-container", {
-  loop: true,
-  effect: "coverflow",
   grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "4",
+  spaceBetween: 30,
+  slidesPerView: "3",
+  loop: false,
   coverflowEffect: {
-      modifier: 1,
+    rotate: 0,
+    stretch: 0,
+    depth: 0,
+    modifier: 1,
+    slideShadows: false,
   }
 })
+

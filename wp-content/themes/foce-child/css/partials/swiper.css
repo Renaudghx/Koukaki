@@ -1,0 +1,30 @@
+.story #characters {
+  flex-direction: column;
+  margin-right: 0;
+}
+
+.swiper-container {
+  width: 1440px;
+  height: 440px;
+}
+
+.swiper-slide figure {
+  margin: 0;
+}
+.swiper-slide img {
+  height: none;
+  max-width: none;
+}
+
+.main-character h3 {
+  background-position: left;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.story #characters div {
+  flex: none;
+  flex-shrink: 0;
+}
+
+/*# sourceMappingURL=swiper.css.map */

@@ -1,5 +1,7 @@
 .background-video {
   position: absolute;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .banner {
@@ -9,6 +11,11 @@
   animation: logo-move 20s 0s linear both infinite;
   position: fixed;
   display: block;
+}
+
+.story__article {
+  margin-bottom: 2em;
+  padding-bottom: 0px;
 }
 
 @keyframes logo-move {
