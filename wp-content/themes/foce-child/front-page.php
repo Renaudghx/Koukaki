@@ -6,15 +6,15 @@ get_header();
     <main id="primary" class="site-main">
         <section class="banner">
         <video class="background-video" autoplay loop muted 
+        data-bottom="transform: translateY(0px);" 
+        data-top-bottom="transform: translateY(-200px);"
         poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
             <source src="http://localhost/P9/koukaki/wp-content/themes/foce-child/assets/video/Studio_Koukaki-vidéo_header_sans_son_.mp4" type="video/mp4">
+        
         </video>
-        <img class="imgLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"
-        data-bottom="transform: translateY(45px);" 
-        data-top-bottom="transform: translateY(-200px);"
-        >
+        <img class="imgLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
-        <section id="#story" class="story">
+        <section id="story" class="story">
             <h2>
                 <span class="h2Contain">
                     <span class="title-story">L'histoire</span>
@@ -56,6 +56,16 @@ get_header();
             </article>
             <article id="place">
                 <div>
+                    <img class="bigCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/big_cloud.png'; ?>" alt="gros nuage"
+                    data-anchor-target="#place"
+                    data--25-bottom-top="transform: translateX(0px);" 
+                    data-200-top="transform: translateX(300px);"
+                    >
+                    <img class="littleCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/little_cloud.png'; ?>" alt="petit nuage"
+                    data-anchor-target="#place"
+                    data--75-bottom-top="transform: translateX(0px);" 
+                    data-300-top="transform: translateX(300px);"
+                    >
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>

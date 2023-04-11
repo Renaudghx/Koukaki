@@ -1,0 +1,23 @@
+.story #place {
+  background-image: url("http://localhost/P9/koukaki/wp-content/themes/foce-child/assets/images/Studio_Koukaki-image_place.png");
+}
+
+.bigCloud {
+  position: relative;
+  top: -70px;
+  left: 650px;
+}
+
+.littleCloud {
+  position: relative;
+  top: -15px;
+  left: 430px;
+}
+
+#place div h3, #place div p {
+  position: relative;
+  top: -120px;
+  left: 20px;
+}
+
+/*# sourceMappingURL=section-place.css.map */

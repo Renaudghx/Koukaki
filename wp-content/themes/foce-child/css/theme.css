@@ -204,6 +204,28 @@ section {
     transform: translate(0px, 0px);
   }
 }
+.story #place {
+  background-image: url("http://localhost/P9/koukaki/wp-content/themes/foce-child/assets/images/Studio_Koukaki-image_place.png");
+}
+
+.bigCloud {
+  position: relative;
+  top: -70px;
+  left: 650px;
+}
+
+.littleCloud {
+  position: relative;
+  top: -15px;
+  left: 430px;
+}
+
+#place div h3, #place div p {
+  position: relative;
+  top: -120px;
+  left: 20px;
+}
+
 .story #characters {
   flex-direction: column;
   margin-right: 0;
@@ -231,6 +253,119 @@ section {
 .story #characters div {
   flex: none;
   flex-shrink: 0;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 84px;
+  text-align: center;
+}
+
+#menuToggle a:hover {
+  text-shadow: 0px 0px 14px #FF5C00;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 40px;
+  height: 1px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 1px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #FFF5E9;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(0%, -100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+#menu li {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 84px;
+  text-align: center;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
 }
 
 /*# sourceMappingURL=theme.css.map */
