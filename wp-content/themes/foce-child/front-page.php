@@ -56,12 +56,12 @@ get_header();
             </article>
             <article id="place">
                 <div>
-                    <img class="bigCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/big_cloud.png'; ?>" alt="gros nuage"
+                    <img class="cloud bigCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/big_cloud.png'; ?>" alt="gros nuage"
                     data-anchor-target="#place"
                     data--25-bottom-top="transform: translateX(0px);" 
                     data-200-top="transform: translateX(300px);"
                     >
-                    <img class="littleCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/little_cloud.png'; ?>" alt="petit nuage"
+                    <img class="cloud littleCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/little_cloud.png'; ?>" alt="petit nuage"
                     data-anchor-target="#place"
                     data--75-bottom-top="transform: translateX(0px);" 
                     data-300-top="transform: translateX(300px);"
