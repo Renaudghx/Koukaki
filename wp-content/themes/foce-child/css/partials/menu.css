@@ -1,5 +1,13 @@
-.site-header {
-  top: 32px;
+.main-navigation {
+  height: 80px;
+}
+.main-navigation ul {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+}
+.main-navigation ul .site-title {
+  display: block;
 }
 
 .nav-menu {
@@ -21,6 +29,7 @@
   position: absolute;
   top: 24px;
   right: 10%;
+  cursor: pointer;
 }
 
 .main-navigation .line {
@@ -85,6 +94,7 @@
   opacity: 0;
   transition: transform 1s ease-in-out, opacity 0.55s ease-in-out;
   left: 0%;
+  overflow: hidden;
 }
 #menu ul {
   flex-direction: column;

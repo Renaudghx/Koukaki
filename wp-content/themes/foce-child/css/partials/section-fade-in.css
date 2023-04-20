@@ -1,13 +1,10 @@
-section {
+section, .banner .imgLogo {
   animation: section-fade-in 1.5s 0ms ease-in-out both;
 }
 
 .banner {
   animation: section-fade-in-movie 1.5s 0ms ease-in-out both;
   background-image: none;
-}
-.banner > .imgLogo {
-  animation: section-fade-in 1.5s 0ms ease-in-out both;
 }
 
 @keyframes section-fade-in {

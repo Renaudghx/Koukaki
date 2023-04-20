@@ -1,11 +1,5 @@
 // ---------- Swiper ----------
 
-// core version:
-import Swiper from '../../../../node_modules/swiper/swiper-bundle.esm.browser.min.js';
-// import Swiper styles :
-import sheet from '../../../../node_modules/swiper/swiper.min.css' assert { type: 'css' };
-document.adoptedStyleSheets = [sheet];
-
 // init Swiper:
 
 const swiper = new Swiper(".swiper-container", {
@@ -19,6 +13,13 @@ const swiper = new Swiper(".swiper-container", {
     depth: 0,
     modifier: 1,
     slideShadows: false,
+  },
+  breakpoints: {
+    700: {
+      slidesPerView: "1"
+    },
+    1000: {
+      slidesPerView: "2"
+    }
   }
 })
-

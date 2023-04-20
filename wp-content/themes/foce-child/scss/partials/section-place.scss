@@ -1,24 +1,31 @@
 .story #place {
-    background-image: url("http://localhost/P9/koukaki/wp-content/themes/foce-child/assets/images/Studio_Koukaki-image_place.png");
+    background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+    display: flex;
+    background-size: cover;
 }
 
 .cloud {
-    position: relative;
+    position: absolute;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .bigCloud {
-    top: -70px;
-    left: 650px;
+    bottom: 520px;
+    right: 30%;
 }
 
 .littleCloud {
-    top: -15px;
-    left: 430px;
+    bottom: 415px;
+    right: 55%;
 }
+
 
 #place div h3, #place div p {
     position: relative;
-    top: -120px;
+    top: -42px;
     left: 20px;
+}
+
+.site-main {
+    overflow: hidden;
 }

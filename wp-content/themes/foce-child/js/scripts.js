@@ -4,35 +4,15 @@ setTimeout(function() {
   logoImg.classList.remove('imgLogo');
 }, (1500));
 
-
-// ---------- Spin Flower ----------
-const flower = document.querySelector('.title-story');
-
-let lastKnownScrollPosition = 0;
-let ticking = false;
-
-document.addEventListener("scroll", (event) => {
-  lastKnownScrollPosition = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      flower.classList.add('spinFaster');;
-      ticking = false;
-    });
-    ticking = true;
-    flower.classList.remove('spinFaster');
-  }
-});
-
 // ---------- Title Scroll ----------
 
 // Remove the transition class
 const titleStory = document.querySelector('.title-story');
 titleStory.classList.remove('title-story');
 const titleStudio1 = document.querySelector('.studio1');
-titleStudio1.classList.remove('.studio1');
+titleStudio1.classList.remove('studio1');
 const titleStudio2 = document.querySelector('.studio2');
-titleStudio2.classList.remove('.studio2');
+titleStudio2.classList.remove('studio2');
 
 function titleObserver(classAnim, classObserve, nameConst){
 
@@ -63,14 +43,6 @@ titleObserver('studio2','.observe-studio', titleStudio2);
 
 var s = skrollr.init();
 
-// Init de skrollr uniquement sur desktop
-if (window.matchMedia("(min-width: 1025px)").matches) {
-     skrollr.init({
-         forceHeight: false,
-         edgeStrategy: "set",
-         easing:{
-             WTF:Math.random,
-            inverted: (e) => 1-e
-         }
-     });
+if (s.isMobile()) {
+    s.destroy();
 }

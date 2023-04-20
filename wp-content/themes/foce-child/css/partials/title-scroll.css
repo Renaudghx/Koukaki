@@ -17,11 +17,9 @@
 @keyframes scroll-title {
   0% {
     transform: translateY(80px);
-    transform-origin: bottom;
   }
   100% {
     transform: translateY(0px);
-    transform-origin: bottom;
   }
 }
 .observe-story, .observe-studio {

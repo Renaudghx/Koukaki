@@ -8,9 +8,8 @@ get_header();
         <video class="background-video" autoplay loop muted 
         data-bottom="transform: translateY(0px);" 
         data-top-bottom="transform: translateY(-200px);"
-        poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
-            <source src="http://localhost/P9/koukaki/wp-content/themes/foce-child/assets/video/Studio_Koukaki-vidéo_header_sans_son_.mp4" type="video/mp4">
-        
+        poster="<?php echo get_template_directory_uri() . '-child/assets/images/banner.png'; ?>">
+            <source src="<?php echo get_template_directory_uri() . '-child/assets/video/Studio_Koukaki-vidéo_header_sans_son_.mp4'; ?>" type="video/mp4">
         </video>
         <img class="imgLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
@@ -56,20 +55,19 @@ get_header();
             </article>
             <article id="place">
                 <div>
-                    <img class="cloud bigCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/big_cloud.png'; ?>" alt="gros nuage"
+                    <h3>Le Lieu</h3>
+                    <p><?php echo get_theme_mod('place'); ?></p>
+                </div>
+                <img id="bigCloud" class="cloud bigCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/big_cloud.png'; ?>" alt="gros nuage"
                     data-anchor-target="#place"
                     data--25-bottom-top="transform: translateX(0px);" 
                     data-200-top="transform: translateX(300px);"
                     >
-                    <img class="cloud littleCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/little_cloud.png'; ?>" alt="petit nuage"
+                    <img id="littleCloud" class="cloud littleCloud" src="<?php echo get_template_directory_uri() . '-child/assets/images/little_cloud.png'; ?>" alt="petit nuage"
                     data-anchor-target="#place"
                     data--75-bottom-top="transform: translateX(0px);" 
                     data-300-top="transform: translateX(300px);"
                     >
-                    <h3>Le Lieu</h3>
-                    <p><?php echo get_theme_mod('place'); ?></p>
-                </div>
-
             </article>
         </section>
 
@@ -87,10 +85,6 @@ get_header();
             </div>
             </section>
             <?php get_template_part( 'section-oscars/section-festival' ); ?>
-            <script src="http://d3a1v57rabk2hm.cloudfront.net/maxjacobson/bold_mobile-copy-8/js/skrollr.min.js"></script>
-            <script src="//d3a1v57rabk2hm.cloudfront.net/maxjacobson/bold_mobile-copy-8/js/skrollr.js"></script>
-            <script type="module" src="./node_modules/swiper/swiper-bundle.js"></script>
     </main><!-- #main -->
-
 <?php
 get_footer();
